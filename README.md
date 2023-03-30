@@ -30,10 +30,13 @@ JavaScript Inherit between Class and Object.create
       PersonDev.init.call(this, firstName, lastName, this.skills = skills);
     }
     
+    FreshDev.introduce = function() { console.log('Hi ' + this.firstName ); }
+    
     // Let's create object from FreshDev
     const em = Object.create(FreshDev);
     // Get Inherit method and properties
     em.init('emz', 'Leo', 'PHPDev')
+    em.introduce();
 ```
 
 ```JS
@@ -45,4 +48,6 @@ JavaScript Inherit between Class and Object.create
   lastName : "Leo"
   skills :  "PHPDev"
  [[Prototype]] : Object 
+ ---------------------
+ Hi, em
 ```
